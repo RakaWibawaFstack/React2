@@ -4,7 +4,12 @@ import React from "react";
 function Login() {
   const [users, setUsers] = React.useState([]);
   const [firstName, setfirstName] = React.useState("");
+  const [firstName2, setfirstName2] = React.useState("");
+  const [lastName, setlastName] = React.useState("");
+  const [Email, setEmail] = React.useState("");
+  const [Phone, setPhone] = React.useState("");
   const [password, setPassword] = React.useState("");
+  const [password2, setPassword2] = React.useState("");
   const [signedIn, setSignedIn] = React.useState(false);
   const initialState = [
       {
@@ -80,8 +85,8 @@ function Login() {
         type="text"
         id="fname"
         name="fname"
-        value={firstName}
-        onChange={(e) => setfirstName(e.target.value)}
+        value={firstName2}
+        onChange={(e) => setfirstName2(e.target.value)}
       />{" "}
 
       <label for="fname"> Last name: </label>{" "}
@@ -89,8 +94,8 @@ function Login() {
         type="text"
         id="fname"
         name="fname"
-        value={firstName}
-        onChange={(e) => setfirstName(e.target.value)}
+        value={lastName}
+        onChange={(e) => setlastName(e.target.value)}
       />{" "}<br />    
 
       <label for="lname"> Your Email: </label> 
@@ -98,8 +103,8 @@ function Login() {
         type="text"
         id="lname"
         name="lname"
-        value={password}
-        onChange={(e) => setPassword(e.target.value)}
+        value={Email}
+        onChange={(e) => setEmail(e.target.value)}
       />{" "}<br />
 
       <label for="lname"> Your Phone: </label> 
@@ -107,8 +112,8 @@ function Login() {
         type="text"
         id="lname"
         name="lname"
-        value={password}
-        onChange={(e) => setPassword(e.target.value)}
+        value={Phone}
+        onChange={(e) => setPhone(e.target.value)}
       />{" "}<br />
       
       <label for="lname"> Password: </label> 
@@ -116,8 +121,8 @@ function Login() {
         type="password"
         id="lname"
         name="lname"
-        value={password}
-        onChange={(e) => setPassword(e.target.value)}
+        value={password2}
+        onChange={(e) => setPassword2(e.target.value)}
       />{" "}<br />
 
       <button onClick={() => signin(firstName, password)}> Sign Up </button>{" "}
